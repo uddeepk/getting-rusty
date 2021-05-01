@@ -7,7 +7,8 @@ fn main() {
 
 	println!("1. Farenheit to Celsius");
 	println!("2. Celsius to Farenheit");
-
+	println!("Please enter your choice!");
+	
 	let mut choice = String::new();
 
 	io::stdin()
@@ -15,14 +16,11 @@ fn main() {
 	    .expect("Failed to read line");
 
 	let choice: i32 = match choice.trim().parse() {
-	    Ok(num) => num,// {
-	//	if choice < 0 || choice > 2 {
-	//	    println!("Invalid Choice!");
-	//	    continue;
-	//	}
-	  //  }
+	    Ok(num) => num,
 	    Err(_) => continue,
 	};
+
+	println!("Enter the temperature: ");
 	
 	let mut temperature = String::new();
 
@@ -43,6 +41,7 @@ fn main() {
 	    let temperature_farenheit = celsius_to_farenheit(temperature);
 	    println!("{} Celsius is {} Farenheit", temperature, temperature_farenheit);
 	} else {
+	    println!("Invalid Choice!\n");
 	    continue;
 	}
 	// When input is ok
