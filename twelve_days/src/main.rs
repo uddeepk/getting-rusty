@@ -17,12 +17,13 @@ fn main() {
 
     let mut n = 0;
 
+    println!("The Twelve Days of Christmas\n");
+    
     for d in ith.iter() {
 
 	println!("On the {} day of Christmas, my true love sent to me", d);
 
 	for m in 0..n+1 {
-	    //println!("Test{}", m);
 	    println!("{}", verses[m]);
 	}
 	n += 1;
