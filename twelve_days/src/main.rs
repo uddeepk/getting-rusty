@@ -22,8 +22,11 @@ fn main() {
 	println!("On the {} day of Christmas, my true love sent to me", d);
 
 	for m in 0..n+1 {
-	    println!("Test{}", m);
+	    //println!("Test{}", m);
+	    println!("{}", verses[m]);
 	}
 	n += 1;
+	
+	println!();
     }
 }
